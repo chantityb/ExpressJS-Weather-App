@@ -1,11 +1,21 @@
 body {
+  background: url("/img/nature.jpg");
+  background-size: cover;
   width: 800px;
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 .container {
   width: 600px;
   margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 3em;
+  font-family: 'Courgette', cursive;
+
 }
 fieldset {
   display: block;
@@ -22,8 +32,15 @@ fieldset {
   border-image-outset: initial;
   border-image-repeat: initial;
   min-width: -webkit-min-content;
-  padding: 30px;
+  padding: 20px;
 }
+
+input.ghost-button {
+  font-size: 17px;
+  font-family: 'Oxygen', sans-serif;
+  color: #fff;
+}
+
 .ghost-input, p {
   display: block;
   font-weight:300;
@@ -39,7 +56,7 @@ fieldset {
   background: #fff;
   font-family: Open Sans,Verdana;
   padding: 10px 15px;
-  margin: 30px 0px;
+  margin: 35px 0px;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -50,9 +67,9 @@ fieldset {
   border-bottom:1px solid #ddd;
 }
 .ghost-button {
-  background-color: transparent;
-  border:2px solid #ddd;
-  padding:10px 30px;
+  background-color: #fe0000;
+  border:2px solid #fe0000;
+  padding:13px 30px;
   width: 100%;
   min-width: 350px;
   -webkit-transition: all 0.1s ease-in-out;
@@ -62,8 +79,16 @@ fieldset {
   transition: all 0.1s ease-in-out;
 }
 .ghost-button:hover {
-  border:2px solid #515151;
+  border:2px solid #454545;
+  background-color: #454545;
+  transition: background-color .10s;
+  color: #797979;
 }
 p {
-  color: #E64A19;
+  color: #fefe00;
+  background: initial;
+  font-size: 35px;
+  font-style: italic;
+  font-family: 'Oxygen', sans-serif;
+  text-align: left;
 }

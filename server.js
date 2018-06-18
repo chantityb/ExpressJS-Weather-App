@@ -11,8 +11,19 @@ const apiKey = '73f73aecd54d6498254972fdb875ab42';
 
 
 
-//exposes style.css file in public/css folder
-app.use(express.static('public'));
+//exposes style.css file in public/css folder as well as img folder
+//To have /img in your request URL, use: app.use("/styles", express.static(__dirname + '/styles'));
+app.use('/img', express.static(__dirname + '/img'));
+
+// GET /style.css and img
+app.use(express.static(__dirname + 'public'));
+
+// Mount the middleware at "/static" to serve static content only when their request path is prefixed with "/static".
+
+// GET /static/style.css etc.
+app.use('/static', express.static(__dirname + 'public'));
+
+//extends req-body object.  allows to choose between parsing the URL-encoded data with the querystring library (when false) or the qs library (when true)
 app.use(bodyParser.urlencoded({ extended: true }));
 
 /* sets up ejs template engine. A template engine enables you to use static template files in your application. 

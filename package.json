@@ -4,7 +4,8 @@
   "description": "web app where users can type in a city name and get real-time weather data instantly on the screen.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,8 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "request": "^2.87.0"
+  },
+  "engines": {
+    "node": "10.5.0"
   }
 }

@@ -2,20 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Weather App Node</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-  </head>
+    
+    <!-- links bootstrap from within node_modules/bootstrap folder -->
+    <script language="javascript" src="node_modules/bootstrap/.../bootstrap.min.js"></script>
+	<link rel="stylesheet" href="node_modules/bootstrap/.../bootstrap.min.css"/>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ </head>
   <body>
     <div class="container">
+      <h1>What's my weather like?</h1>
       <fieldset>
-        <h1>What's my weather like?</h1>
         <form action="/" method="post">
           <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
-          <input type="submit" class="ghost-button" value="Get Weather">
-        </form>
-        <% if(locals.weather !== null){ %>
+		   <input type="submit" class="ghost-button" value="Get Weather">
+         </form>
+      	<% if(locals.weather !== null){ %>
         <p><%= locals.weather %></p>
         <% } %>
         <% if(locals.error !== null){ %>

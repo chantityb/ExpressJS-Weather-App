@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 //using simplified HTTP client
 const request = require('request');
 
+//set up listening port
+const port = process.env.PORT || 3000;
+
 const app = express();
 //using OpenWeatherMap API 
 const apiKey = '73f73aecd54d6498254972fdb875ab42';
@@ -18,6 +21,9 @@ const apiKey = '73f73aecd54d6498254972fdb875ab42';
 // GET /style.css and img
 app.use(express.static('public'));
 //app.use(express.static(__dirname + 'public'));
+
+//accessing bootstrap
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 
 // Mount the middleware at "/static" to serve static content only when their request path is prefixed with "/static".
 
@@ -62,6 +68,6 @@ request(url, function (err, response, body) {
 }) 
 
 //create server
-app.listen(3000, function () {
-  console.log('Hey queen, the app  is listening on port 3000!')
+app.listen(port, function () {
+  console.log('Hey queen, the app  is listening on port 8080!')
 })
